@@ -55,7 +55,7 @@ const LoginForm = () => {
     const { error } = await supabase.auth.signInWithOtp({
       email,
       options: {
-        emailRedirectTo: `${location.origin}/callback`,
+        emailRedirectTo: `https://supabase-assesment.vercel.app/callback`,
       },
     });
 

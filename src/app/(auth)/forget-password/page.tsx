@@ -14,7 +14,7 @@ export default function ForgotPasswordPage() {
         setLoading(true);
         try {
             const { error } = await supabase.auth.resetPasswordForEmail(email, {
-                redirectTo: `${window.location.origin}/reset-password`,
+                redirectTo: `https://supabase-assesment.vercel.app/reset-password`,
             });
             if (error) throw error;
             setMessage("Check your email for the reset link.");
